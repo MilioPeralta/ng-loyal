@@ -5,4 +5,5 @@
 export class Contestant {
   id: number;
   name: String;
+  hasLost?: Boolean;
 }

@@ -1,34 +1,22 @@
 <div class="board">
-    <ul>
-        <app-contestant *ngFor="let contestant of contestants" [contestant]="contestant"></app-contestant>
-    </ul>
-    <br/>
-    <div>
-        <ul>
-            <app-contestant *ngIf="winners.length > 0" class="'winner-0'" [contestant]="winners[0]"></app-contestant>
-        </ul>
-    </div>
-    <div>
-        <ul>
-            <app-contestant *ngIf="winners.length > 1" class="'winner-1'" [contestant]="winners[1]"></app-contestant>
-        </ul>
-    </div>
-    <div>
-        <ul>
-            <app-contestant *ngIf="winners.length > 2" class="'winner-2'" [contestant]="winners[2]"></app-contestant>
-            <app-contestant *ngIf="winners.length > 3" class="'winner-3'" [contestant]="winners[3]"></app-contestant>
-        </ul>
-    </div>
-    <div>
-        <ul>
-            <app-contestant *ngIf="winners.length > 4" class="'winner-4'" [contestant]="winners[4]"></app-contestant>
-            <app-contestant *ngIf="winners.length > 5" class="'winner-5'" [contestant]="winners[5]"></app-contestant>
-        </ul>
-    </div>
-    <div>
-        <ul>
-            <app-contestant *ngIf="winners.length > 6" class="'winner-6'" [contestant]="winners[6]"></app-contestant>
-        </ul>
-    </div>
-
+  <ul>
+    <app-contestant *ngFor="let contestant of contestants" [contestant]="contestant"></app-contestant>
+  </ul>
+  <ul>
+    <app-contestant *ngIf="winners.length > 0" class="'winner-0'" [contestant]="winners[0]"></app-contestant>
+  </ul>
+  <ul>
+    <app-contestant *ngIf="winners.length > 1" class="'winner-1'" [contestant]="winners[1]"></app-contestant>
+  </ul>
+  <ul>
+    <app-contestant *ngIf="winners.length > 2" class="'winner-2'" [contestant]="winners[2]"></app-contestant>
+    <app-contestant *ngIf="winners.length > 3" class="'winner-3'" [contestant]="winners[3]"></app-contestant>
+  </ul>
+  <ul>
+    <app-contestant *ngIf="winners.length > 4" class="'winner-4'" [contestant]="winners[4]"></app-contestant>
+    <app-contestant *ngIf="winners.length > 5" class="'winner-5'" [contestant]="winners[5]"></app-contestant>
+  </ul>
+  <ul>
+    <app-contestant *ngIf="winners.length > 6" class="'winner-6'" [contestant]="winners[6]"></app-contestant>
+  </ul>
 </div>
