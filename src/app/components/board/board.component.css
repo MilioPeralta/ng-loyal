@@ -1,5 +1,29 @@
 ul {
-  list-style-type: none;
-  width: 10%;
-  float: left;
+    list-style-type: none;
+    width: 10%;
+    float: left;
+}
+
+.col-xs-custom {
+    flex: 0 0 12.5%;
+}
+
+.col-xs-offset-custom {
+    margin-left: 12.5%;
+}
+
+.col-xs-offset-custom-2 {
+    margin-left: 25%;
+}
+
+.col-xs-offset-custom-3 {
+    margin-left: 37.5%;
+}
+
+.col-xs-offset-custom-4 {
+    margin-left: 50%;
+}
+
+.col-xs-offset-custom-5 {
+    margin-left: 62.5%;
 }
