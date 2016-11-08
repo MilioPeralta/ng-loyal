@@ -1,5 +1,11 @@
-<div class="box"[@fadeIn]="state" [ngClass]="{'lost': contestant.hasLost}">
-    <!--<img src="/resources/img/angular2-logo.png" height="10" width="10">-->
-    <!--{{ contestant.name }}-->
-    {{ contestant.id }}
-</div>
+<svg>
+  <rect [attr.x]="x+ '%'" [attr.y]="y+ '%'" height="5%" width="12.5%" />
+  <image [attr.x]="(x+10) + '%'" [attr.y]="y+ '%'" xlink:href="/resources/img/angular2-logo.png" y="0" height="50px" width="50px" />
+</svg>
+
+
+<!--<div class="box"[@fadeIn]="state" [ngClass]="{'lost': contestant.hasLost}">-->
+<!--&lt;!&ndash;<img src="/resources/img/angular2-logo.png" height="10" width="10">&ndash;&gt;-->
+<!--&lt;!&ndash;{{ contestant.name }}&ndash;&gt;-->
+<!--{{ contestant.id }}-->
+<!--</div>-->

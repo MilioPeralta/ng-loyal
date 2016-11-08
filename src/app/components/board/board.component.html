@@ -1,50 +1,62 @@
 <div class="board">
-    <div class="row">
-        <div class="col-xs-custom" *ngFor="let contestant of contestants">
-            <app-contestant [contestant]="contestant"></app-contestant>
-        </div>
-    </div>
+  <svg width="100%" height="100%">
+    <svg app-contestant
+         *ngFor="let contestant of contestants; let i = index"
+         [contestant]="contestant"
+         [x]="i*12"
+         [y]="0"
+    >
+    </svg>
 
-    <div class="row">
-        <div class="col-xs-custom col-xs-offset-custom">
-            <app-contestant *ngIf="winners.length > 0" class="'winner-0'"
-                            [contestant]="winners[0]"></app-contestant>
-        </div>
-    </div>
+    <polyline
+      points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
+      fill="white" stroke="#D07735" stroke-width="6" />
 
-    <div class="row">
-        <div class="col-xs-custom col-xs-offset-custom-2">
-            <app-contestant *ngIf="winners.length > 1" class="'winner-1'"
-                            [contestant]="winners[1]"></app-contestant>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-xs-custom col-xs-offset-custom-3">
-            <app-contestant *ngIf="winners.length > 2" class="'winner-2'"
-                            [contestant]="winners[2]"></app-contestant>
-        </div>
-        <div class="col-xs-custom">
-            <app-contestant *ngIf="winners.length > 3" class="'winner-3'"
-                            [contestant]="winners[3]"></app-contestant>
-        </div>
-    </div>
+    <svg app-contestant
+         *ngIf="winners.length > 0"
+         class="'winner-0'"
+         [contestant]="winners[0]"
+         [x]="12"
+         [y]="10"
+    >
+    </svg>
+  </svg>
 
-    <div class="row">
-        <div class="col-xs-custom col-xs-offset-custom-4">
-            <app-contestant *ngIf="winners.length > 4" class="'winner-4'"
-                            [contestant]="winners[4]"></app-contestant>
-        </div>
-        <div class="col-xs-custom col-xs-offset-custom">
-            <app-contestant *ngIf="winners.length > 5" class="'winner-5'"
-                            [contestant]="winners[5]"></app-contestant>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-xs-custom col-xs-offset-custom-5">
-            <app-contestant *ngIf="winners.length > 6" class="'winner-6'" [contestant]="winners[6]"></app-contestant>
-        </div>
-    </div>
+  <!--<div class="row">-->
+  <!--<div class="col-xs-custom col-xs-offset-custom-2">-->
+  <!--<app-contestant *ngIf="winners.length > 1" class="'winner-1'"-->
+  <!--[contestant]="winners[1]"></app-contestant>-->
+  <!--</div>-->
+  <!--</div>-->
+
+  <!--<div class="row">-->
+  <!--<div class="col-xs-custom col-xs-offset-custom-3">-->
+  <!--<app-contestant *ngIf="winners.length > 2" class="'winner-2'"-->
+  <!--[contestant]="winners[2]"></app-contestant>-->
+  <!--</div>-->
+  <!--<div class="col-xs-custom">-->
+  <!--<app-contestant *ngIf="winners.length > 3" class="'winner-3'"-->
+  <!--[contestant]="winners[3]"></app-contestant>-->
+  <!--</div>-->
+  <!--</div>-->
+
+  <!--<div class="row">-->
+  <!--<div class="col-xs-custom col-xs-offset-custom-4">-->
+  <!--<app-contestant *ngIf="winners.length > 4" class="'winner-4'"-->
+  <!--[contestant]="winners[4]"></app-contestant>-->
+  <!--</div>-->
+  <!--<div class="col-xs-custom col-xs-offset-custom">-->
+  <!--<app-contestant *ngIf="winners.length > 5" class="'winner-5'"-->
+  <!--[contestant]="winners[5]"></app-contestant>-->
+  <!--</div>-->
+  <!--</div>-->
+
+  <!--<div class="row">-->
+  <!--<div class="col-xs-custom col-xs-offset-custom-5">-->
+  <!--<app-contestant *ngIf="winners.length > 6" class="'winner-6'" [contestant]="winners[6]"></app-contestant>-->
+  <!--</div>-->
+  <!--</div>-->
 
 </div>

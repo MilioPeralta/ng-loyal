@@ -11,7 +11,7 @@ import {
 import { Contestant } from "../../models/Contestant";
 
 @Component({
-  selector: 'app-contestant',
+  selector: '[app-contestant]',
   templateUrl: './contestant.component.html',
   styleUrls: ['./contestant.component.css'],
   animations: [
@@ -36,6 +36,10 @@ import { Contestant } from "../../models/Contestant";
 export class ContestantComponent implements OnInit {
   @Input()
   private contestant: Contestant;
+  @Input()
+  private x: number = 10;
+  @Input()
+  private y: number = 10;
   private state: Boolean = false;
 
   constructor() {

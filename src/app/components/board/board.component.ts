@@ -82,6 +82,8 @@ export class BoardComponent implements OnInit {
 
     // Let's go !
     this.run();
+
+    // get window width
   }
 
 }
