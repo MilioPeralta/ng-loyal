@@ -1,6 +1,6 @@
 import {
   Component,
-  OnInit
+  OnInit, HostListener
 } from "@angular/core";
 import { Contestant } from "../../models/Contestant";
 import { ContestantService } from "../../services/contestant.service";
@@ -22,11 +22,34 @@ export class BoardComponent implements OnInit {
   private roundTime: number = 2000;
   private appearTime: number = 500;
   private roundNumber: number = 7;
+  private windowWidth: number;
+  private windowHeight: number;
 
   // The constructor itself does nothing.
   // The parameter simultaneously defines a private contestantService property
   // and identifies it as a ContestantService injection site.
   constructor(private contestantService: ContestantService) {
+  }
+
+
+  /**
+   * Get numeric value of percentage of window width
+   * @param percentage
+   * @returns {number}
+   */
+  getNumericWidthForPercentage(percentage: number): number {
+    // Each contestant are 12% (of window width) long
+    return this.windowWidth * percentage / 100;
+  }
+
+  /**
+   * Get numeric value of percentage of window height
+   * @param percentage
+   * @returns {number}
+   */
+  getNumericHeightForPercentage(percentage: number): number {
+    // Each contestant are 15% (of window height) long
+    return this.windowHeight * percentage / 100;
   }
 
   round(roundNumber: number): void {
@@ -84,6 +107,8 @@ export class BoardComponent implements OnInit {
     this.run();
 
     // get window width
+    this.windowWidth = window.innerWidth;
+    this.windowHeight = window.innerHeight;
   }
 
 }

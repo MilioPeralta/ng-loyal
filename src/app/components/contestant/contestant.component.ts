@@ -40,6 +40,8 @@ export class ContestantComponent implements OnInit {
   private x: number = 10;
   @Input()
   private y: number = 10;
+  @Input()
+  private width: number = 10;
   private state: Boolean = false;
 
   constructor() {

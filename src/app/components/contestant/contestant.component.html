@@ -1,8 +1,6 @@
-<svg>
-  <rect [attr.x]="x+ '%'" [attr.y]="y+ '%'" height="5%" width="12.5%" />
-  <image [attr.x]="(x+10) + '%'" [attr.y]="y+ '%'" xlink:href="/resources/img/angular2-logo.png" y="0" height="50px" width="50px" />
+<svg [attr.x]="x " [attr.y]="y" [attr.width]="width" [@fadeIn]="state">
+  <image xlink:href="/resources/img/angular2-logo.png" height="50px" width="50px" />
 </svg>
-
 
 <!--<div class="box"[@fadeIn]="state" [ngClass]="{'lost': contestant.hasLost}">-->
 <!--&lt;!&ndash;<img src="/resources/img/angular2-logo.png" height="10" width="10">&ndash;&gt;-->
