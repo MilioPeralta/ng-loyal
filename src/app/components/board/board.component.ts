@@ -38,7 +38,6 @@ export class BoardComponent implements OnInit {
    * @returns {number}
    */
   getNumericWidthForPercentage(percentage: number): number {
-    // Each contestant are 12% (of window width) long
     return this.windowWidth * percentage / 100;
   }
 
@@ -48,7 +47,6 @@ export class BoardComponent implements OnInit {
    * @returns {number}
    */
   getNumericHeightForPercentage(percentage: number): number {
-    // Each contestant are 15% (of window height) long
     return this.windowHeight * percentage / 100;
   }
 
